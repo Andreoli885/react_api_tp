@@ -1,13 +1,14 @@
-const rp=require("request-promise");
+const rp = require("request-promise");
 
-function buscanumero(numero){
-    
-    var options={
-        uri:"http://apilayer.net/api/validate?access_key=2fcf610cd1c1d5f0a7f795e8c6d5dad6&number="+numero,
-        json:true
-        
+function buscaNumero(numero) {
+
+    var options = {
+        uri: "http://apilayer.net/api/validate?access_key=fc006320efe15253ac2b9b3f04679387&number=" + numero,
+        json: true
+
     }
+    console.log("uri: " + options.uri);
     return rp(options);
 }
 
-module.exports=buscanumero;
+module.exports = buscaNumero;
